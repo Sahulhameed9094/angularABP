@@ -74,7 +74,11 @@
                 </button>
               </div>
               <div class="col-6 col-sm-auto d-grid">
-                <button type="button" class="btn btn-primary btn-block" (click)="list.get()">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block"
+                  (click)="list.get()"
+                >
                   <span>{{ 'AbpUi::Refresh' | abpLocalization }}</span>
                 </button>
               </div>
@@ -127,13 +131,19 @@
           </ng-template>
         </ngx-datatable-column>
 
-        <ngx-datatable-column name="{{ 'ProductService::Name' | abpLocalization }}" prop="name">
+        <ngx-datatable-column
+          name="{{ 'ProductService::Name' | abpLocalization }}"
+          prop="name"
+        >
           <ng-template let-row="row" ngx-datatable-cell-template>
             {{ row.name }}
           </ng-template>
         </ngx-datatable-column>
 
-        <ngx-datatable-column name="{{ 'ProductService::Price' | abpLocalization }}" prop="price">
+        <ngx-datatable-column
+          name="{{ 'ProductService::Price' | abpLocalization }}"
+          prop="price"
+        >
           <ng-template let-row="row" ngx-datatable-cell-template>
             {{ row.price }}
           </ng-template>
@@ -153,7 +163,9 @@
     <form [formGroup]="form" (ngSubmit)="submitForm()" validateOnSubmit>
       <div class="mt-2 fade-in-top">
         <div class="form-group">
-          <label for="product-name"> {{ 'ProductService::Name' | abpLocalization }} * </label>
+          <label for="product-name">
+            {{ 'ProductService::Name' | abpLocalization }} *
+          </label>
 
           <input
             id="product-name"
@@ -164,9 +176,16 @@
           />
         </div>
         <div class="form-group">
-          <label for="product-price"> {{ 'ProductService::Price' | abpLocalization }} * </label>
+          <label for="product-price">
+            {{ 'ProductService::Price' | abpLocalization }} *
+          </label>
 
-          <input type="number" id="product-price" formControlName="price" class="form-control" />
+          <input
+            type="number"
+            id="product-price"
+            formControlName="price"
+            class="form-control"
+          />
         </div>
       </div>
     </form>
@@ -182,3 +201,5 @@
     </abp-button>
   </ng-template>
 </abp-modal>
+
+<!-- comment for testing  -->
