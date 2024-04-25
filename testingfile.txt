@@ -1,1 +1,2 @@
 from parent
+from child -> whole project
